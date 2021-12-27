@@ -6,13 +6,21 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity
 {
+	static {
+		System.loadLibrary("backend");
+	}
+
+	public native String stringFromJNI();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         TextView label = new TextView(this);
-        label.setText("Hello world!");
+        label.setText(stringFromJNI());
 
         setContentView(label);
     }
 }
+
+

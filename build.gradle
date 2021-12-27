@@ -21,11 +21,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
-    // If you wish to add C...
-	//externalNativeBuild {
-    //    cmake {
-    //        path "backend/CMakeLists.txt"
-    //        version "3.16.3"
-    //    }
-    //}
+	externalNativeBuild {
+        cmake {
+            path "backend/CMakeLists.txt"
+            version "3.16.3"
+        }
+    }
 }
